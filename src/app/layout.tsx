@@ -2,9 +2,8 @@ import '@/styles/globals.css'
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 import { siteConfig } from '@/constant/config'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import { fontSans } from '@/lib/fonts'
+import { cn } from '@/lib/utils'
 
 export const metadata: Metadata = {
   title: {
@@ -27,7 +26,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={cn(fontSans.variable)}>{children}</body>
     </html>
   )
 }
