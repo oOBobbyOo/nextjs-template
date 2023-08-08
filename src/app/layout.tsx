@@ -4,6 +4,7 @@ import type { ReactNode } from 'react'
 import { siteConfig } from '@/constant/config'
 import { fontSans } from '@/lib/fonts'
 import { cn } from '@/lib/utils'
+import { ThemeProvider } from '@/components/theme-provider'
 
 export const metadata: Metadata = {
   title: {
@@ -25,8 +26,12 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
-      <body className={cn(fontSans.variable)}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={cn(fontSans.variable)}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   )
 }
