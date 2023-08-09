@@ -1,5 +1,9 @@
 export const siteConfig = {
+  name: 'Next.js',
   title: 'Next.js + Tailwind CSS + TypeScript Starter',
   description:
-    'A starter for Next.js, Tailwind CSS, and TypeScript with Absolute Import, Seo, Link component, pre-configured with Husky'
+    'A starter for Next.js, Tailwind CSS, and TypeScript with Absolute Import, Seo, Link component, pre-configured with Husky',
+  links: {
+    github: 'https://github.com/oOBobbyOo/nextjs-template'
+  }
 }
