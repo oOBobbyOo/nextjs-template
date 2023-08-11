@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { allDocs } from 'contentlayer/generated'
 
+import '@/styles/mdx.css'
 import { ChevronRightIcon } from '@radix-ui/react-icons'
 import Balancer from 'react-wrap-balancer'
 
