@@ -16,7 +16,7 @@
     "format:check": "prettier -c .",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "prepare": "husky install",
-    "commit": "git-cz",
+    "commit": "git add . && git-cz",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
     "clean": "rimraf .next .swc out"
   },
